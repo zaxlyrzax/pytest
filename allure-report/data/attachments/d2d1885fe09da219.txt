@@ -1,0 +1,4 @@
+[33mWARNING [0m pytest_result_log:plugin.py:122 Start: test_cases/test_api/test_register_api.py::TestRegisterAPI::test_register_positive[case0]
+[32mINFO    [0m common.api_client:api_client.py:30 【POST请求】url=http://192.168.111.128:7070/auth/register, json={'username': 'wangwu', 'password': '1234567', 'confirmPassword': '1234567', 'email': '29482197783@qq.com', 'phoneNumber': '18139204214'}
+[32mINFO    [0m common.api_client:api_client.py:32 【响应】status_code=200, body={"code":500,"message":"用户名已存在","data":null}
+[33mWARNING [0m pytest_result_log:plugin.py:128 End: test_cases/test_api/test_register_api.py::TestRegisterAPI::test_register_positive[case0]

@@ -1,0 +1,7 @@
+[33mWARNING [0m pytest_result_log:plugin.py:122 Start: test_cases/test_api/test_product_api.py::TestProductApi::test_get_product_page_negative[case0]
+[32mINFO    [0m common.api_client:api_client.py:30 【POST请求】url=http://192.168.111.128:7070/auth/login, json={'username': 'lisi', 'password': '123456'}
+[32mINFO    [0m common.api_client:api_client.py:32 【响应】status_code=200, body={"code":200,"message":"操作成功","data":{"id":316,"username":"lisi","token":"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVVNFUiIsInN1YiI6Imxpc2kiLCJpYXQiOjE3OTE0NTQzODAsImV4cCI6MTc5MTU0MDc4MH0.HHNHTPx9gHb89lcINWxo0No-shZ_96h6pxnFM_oJG78","role":"USER","avatar":null,"email":"2983192051@qq.com","realName":null}}
+[32mINFO    [0m conftest:test_product_api.py:44 当前【测试场景】:非法数据分页查询商品
+[32mINFO    [0m common.api_client:api_client.py:23 【GET请求】url=http://192.168.111.128:7070/products/page, params={'pageSize': '一'}
+[32mINFO    [0m common.api_client:api_client.py:25 【响应】status_code=500, body={"code":500,"message":"系统内部错误，请联系管理员","data":null}
+[33mWARNING [0m pytest_result_log:plugin.py:128 End: test_cases/test_api/test_product_api.py::TestProductApi::test_get_product_page_negative[case0]

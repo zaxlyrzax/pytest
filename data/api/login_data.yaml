@@ -1,0 +1,21 @@
+cases_data:
+  - scenario: "密码错误"
+    username: "lisi"
+    password: "123452"
+    expected_code: 500
+    expected_msg: "用户名或密码错误"
+    tip_text: "用户名或密码错误"
+
+  - scenario: "用户名为空"
+    username: ""
+    password: "123456"
+    expected_code: 500
+    expected_msg: '用户名或密码错误'
+    tip_text: "请填写完整的登录信息"
+
+  - scenario: "密码为空"
+    username: "lisi"
+    password: ''
+    expected_code: 500
+    expected_msg: '用户名或密码错误'
+    tip_text: "请填写完整的登录信息"

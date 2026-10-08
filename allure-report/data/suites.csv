@@ -1,0 +1,294 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","23","test_register_positive[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","61","test_register_negative[case8]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","62","test_create_product[case2]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","57","test_pay_api[case31]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","64","test_create_product_negative[case2]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","20","test_create_product_negative[case14]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","116","test_create_order[case34]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","53","test_pay_api[case15]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","38","test_login_wrong_password[case2]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestLoginAPI","test_login_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","144","test_create_order[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","65","test_pay_api[case5]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","122","test_create_order[case25]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","59","test_get_product_page[case1]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","144","test_create_order[case5]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","116","test_create_order[case29]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","54","test_pay_api[case3]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+        模拟用户前端连续点击注册按钮，并发5次提交同一个注册表单
+        预期：只有1次注册成功，其余请求应该返回用户名已存在；数据库不能出现多条同名用户
+        ","144","test_register_concurrent_click[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","58","test_create_product[case9]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","120","test_create_order[case26]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","50","test_pay_api[case25]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","71","test_create_product[case5]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","61","test_create_product[case8]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","85","test_create_product[case7]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","131","test_create_order[case18]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","36","test_login_wrong_password[case0]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestLoginAPI","test_login_api","",""
+"
+        模拟用户前端连续点击注册按钮，并发5次提交同一个注册表单
+        预期：只有1次注册成功，其余请求应该返回用户名已存在；数据库不能出现多条同名用户
+        ","141","test_register_concurrent_click[case0]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","49","test_pay_api[case14]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","77","test_create_product_negative[case10]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","121","test_create_order[case4]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","118","test_create_order[case31]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","170","test_create_order[case2]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","74","test_pay_api[case27]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","93","test_create_product[case12]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","75","test_register_negative[case9]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","73","test_pay_api[case34]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","112","test_create_order[case35]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","187","test_create_order[case16]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","63","test_create_product_negative[case0]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","84","test_pay_api[case22]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","51","test_register_negative[case10]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","73","test_register_negative[case7]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","160","test_create_order[case10]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","49","test_pay_api[case7]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","124","test_pay_api[case6]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","52","test_pay_api[case28]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","129","test_create_order[case22]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","219","test_create_order[case13]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","51","test_pay_api[case12]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","74","test_register_negative[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","46","test_pay_api[case32]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","40","test_pay_api[case16]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","41","test_create_product_negative[case13]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","77","test_pay_api[case2]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","153","test_create_order[case14]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","88","test_pay_api[case4]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","49","test_create_product_negative[case8]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","84","test_pay_api[case35]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","82","test_pay_api[case37]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","46","test_register_negative[case13]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","50","test_create_product[case10]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","47","test_register_negative[case11]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","48","test_register_negative[case6]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","133","test_create_order[case33]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","63","test_register_negative[case4]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","183","test_create_order[case8]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","156","test_create_order[case21]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","70","test_create_product[case6]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","89","test_pay_api[case21]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","166","test_create_order[case23]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","52","test_pay_api[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","116","test_create_order[case36]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","88","test_create_product[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","85","test_pay_api[case8]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","140","test_create_order[case24]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","128","test_create_order[case15]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","80","test_create_product[case4]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","64","test_pay_api[case18]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","49","test_pay_api[case19]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","157","test_create_order[case20]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","147","test_create_order[case32]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","50","test_register_negative[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","64","test_create_product_negative[case3]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","63","test_register_negative[case3]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","54","test_pay_api[case23]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","47","test_register_negative[case5]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","29","test_login_wrong_password[case1]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestLoginAPI","test_login_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","137","test_create_order[case28]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","75","test_create_product[case11]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","45","test_pay_api[case24]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","60","test_pay_api[case9]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","50","test_pay_api[case29]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","54","test_pay_api[case26]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","22","test_login_user","test_cases.test_api","2026-10-08","passed","2026-10-08","TestLoginAPI","test_login_api","",""
+"","57","test_create_product_negative[case9]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","182","test_create_order[case17]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","138","test_create_order[case3]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","55","test_create_product_negative[case12]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","69","test_pay_api[case10]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","164","test_create_order[case27]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","49","test_pay_api[case17]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","140","test_create_order[case9]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","170","test_create_order[case30]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","83","test_create_product_negative[case11]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","62","test_register_negative[case2]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","30","test_register_negative[case12]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","124","test_create_order[case6]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","45","test_get_product_page_negative[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","111","test_create_order[case37]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","44","test_get_product_page[case0]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","104","test_pay_api[case11]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","29","test_create_product_negative[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","38","test_get_product_by_id_negative[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","113","test_create_product_negative[case6]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","49","test_register_security[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"","46","test_pay_api[case36]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","62","test_create_product_negative[case4]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","57","test_create_product_negative[case7]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","148","test_create_order[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","73","test_pay_api[case13]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","65","test_pay_api[case33]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","135","test_create_order[case19]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","57","test_create_product[case3]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","27","test_register_positive[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","125","test_create_order[case12]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","60","test_register_security[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","163","test_create_order[case7]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","29","test_get_product_by_id_negative[case1]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","65","test_pay_api[case30]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","54","test_pay_api[case20]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"
+            正向场景：
+            先在请求发送之前获取库存
+            请求成功再返回库存
+        ","122","test_create_order[case11]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestOrderAPI","test_order_api","",""
+"","61","test_create_product_negative[case5]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","71","test_create_product[case1]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestProductApi","test_product_api","",""
+"","49","test_pay_api[case0]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestPayApi","test_pay_api","",""
+"","39","test_get_product_by_id[case0]","test_cases.test_api","2026-10-08","passed","2026-10-08","TestProductApi","test_product_api","",""
+"","28","test_register_positive[case2]","test_cases.test_api","2026-10-08","failed","2026-10-08","TestRegisterAPI","test_register_api","",""

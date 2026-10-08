@@ -1,0 +1,1224 @@
+cases_data:
+# data/api/order_data.yaml
+
+
+  # ================================================================
+  # 正向用例（positive）
+  # ================================================================
+
+  # ---------- 正常场景 ----------
+  - scenario: "正向case0-正常创建订单-桃源蜂蜜×1"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "山西省运城市临猗县北大街12号"
+    deliveryPhone: "18239024951"
+    actualAmount: 68
+    deliveryName: "王五"
+    totalAmount: 68
+    discountAmount: 0
+    remark: "请放门口快递柜"
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case1-正常创建订单-手工竹编篮×2"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "北京市朝阳区建国路88号"
+    deliveryPhone: "13800138001"
+    actualAmount: 256
+    deliveryName: "李四"
+    totalAmount: 256
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 2
+        productName: "手工竹编篮"
+        productPrice: 35
+        quantity: 2
+        totalPrice: 70
+
+  - scenario: "正向case2-正常创建订单-多个商品混合"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "上海市浦东新区陆家嘴环路100号"
+    deliveryPhone: "13900139002"
+    actualAmount: 178
+    deliveryName: "赵六"
+    totalAmount: 178
+    discountAmount: 0
+    remark: "周末送货"
+    orderItems:
+      - productId: 3
+        productName: "桃源茶叶"
+        productPrice: 128.00
+        quantity: 1
+        totalPrice: 128.00
+      - productId: 4
+        productName: "野生山菇"
+        productPrice: 85.00
+        quantity: 1
+        totalPrice: 85.00
+
+  - scenario: "正向case3-正常创建订单-桃源米酒×2"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "广东省深圳市南山区科技园路10号"
+    deliveryPhone: "13600136003"
+    actualAmount: 116
+    deliveryName: "孙七"
+    totalAmount: 116
+    discountAmount: 0
+    remark: "易碎品，轻拿轻放"
+    orderItems:
+      - productId: 6
+        productName: "桃源米酒"
+        productPrice: 58
+        quantity: 2
+        totalPrice: 116
+
+  - scenario: "正向case4-正常创建订单-含优惠金额"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "浙江省杭州市西湖区文三路100号"
+    deliveryPhone: "13700137004"
+    actualAmount: 58
+    deliveryName: "周八"
+    totalAmount: 68
+    discountAmount: 10
+    remark: "使用优惠券"
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case5-正常创建订单-农家西红柿×5"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "四川省成都市锦江区春熙路88号"
+    deliveryPhone: "15800158005"
+    actualAmount: 25
+    deliveryName: "吴九"
+    totalAmount: 25
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 7
+        productName: "农家西红柿"
+        productPrice: 15.90
+        quantity: 5
+        totalPrice: 79.5
+
+  - scenario: "正向case6-正常创建订单-面包×10"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "湖北省武汉市洪山区珞喻路1000号"
+    deliveryPhone: "15900159006"
+    actualAmount: 100
+    deliveryName: "郑十"
+    totalAmount: 100
+    discountAmount: 0
+    remark: "尽快发货"
+    orderItems:
+      - productId: 12
+        productName: "面包"
+        productPrice: 10
+        quantity: 10
+        totalPrice: 100
+
+  # ---------- 边界值：金额 ----------
+  - scenario: "正向case7-边界值-总金额最小值0.01"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "湖南省长沙市岳麓区麓山南路1号"
+    deliveryPhone: "18600186007"
+    actualAmount: 0.01
+    deliveryName: "边界测试1"
+    totalAmount: 0.01
+    discountAmount: 0
+    remark: "测试最小金额"
+    orderItems:
+      - productId: 130
+        productName: "蚕豆"
+        productPrice: 0.01
+        quantity: 1
+        totalPrice: 0.01
+
+  - scenario: "正向case8-边界值-总金额超大值99999999.99"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "江苏省南京市玄武区中山路1号"
+    deliveryPhone: "18700187008"
+    actualAmount: 99999999.99
+    deliveryName: "边界测试2"
+    totalAmount: 99999999.99
+    discountAmount: 0
+    remark: "测试超大金额"
+    orderItems:
+      - productId: 129
+        productName: "法式小面包"
+        productPrice: 99999999.99
+        quantity: 1
+        totalPrice: 99999999.99
+
+  - scenario: "正向case9-边界值-总金额为整数无小数"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "福建省厦门市思明区中山路100号"
+    deliveryPhone: "18800188009"
+    actualAmount: 100
+    deliveryName: "边界测试3"
+    totalAmount: 100
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 12
+        productName: "面包"
+        productPrice: 10
+        quantity: 10
+        totalPrice: 100
+
+  - scenario: "正向case10-边界值-总金额为两位小数"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "山东省济南市历下区泉城路200号"
+    deliveryPhone: "18900189010"
+    actualAmount: 85.00
+    deliveryName: "边界测试4"
+    totalAmount: 85.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 4
+        productName: "野生山菇"
+        productPrice: 85.00
+        quantity: 1
+        totalPrice: 85.00
+
+  # ---------- 边界值：数量 ----------
+  - scenario: "正向case11-边界值-购买数量最小值1"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "陕西省西安市雁塔区长安南路1号"
+    deliveryPhone: "13000130011"
+    actualAmount: 68
+    deliveryName: "边界测试5"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case12-边界值-购买数量最大值999"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "辽宁省沈阳市和平区南京街1号"
+    deliveryPhone: "13100131012"
+    actualAmount: 67932
+    deliveryName: "边界测试6"
+    totalAmount: 67932
+    discountAmount: 0
+    remark: "测试最大数量"
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 999
+        totalPrice: 67932
+
+  - scenario: "正向case13-边界值-优惠金额为0"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "重庆市渝中区解放碑步行街1号"
+    deliveryPhone: "13200132013"
+    actualAmount: 68
+    deliveryName: "边界测试7"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case14-边界值-优惠金额为整数"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "云南省昆明市五华区人民路1号"
+    deliveryPhone: "13300133014"
+    actualAmount: 50
+    deliveryName: "边界测试8"
+    totalAmount: 60
+    discountAmount: 10
+    remark: null
+    orderItems:
+      - productId: 7
+        productName: "农家西红柿"
+        productPrice: 15.90
+        quantity: 12
+        totalPrice: 190.8
+
+  # ---------- 等价类：字符串 ----------
+  - scenario: "正向case15-等价类-地址为中文"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "山西省运城市临猗县北大街12号"
+    deliveryPhone: "13400134015"
+    actualAmount: 68
+    deliveryName: "等价测试1"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case16-等价类-地址为英文+数字"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "No.12 Beida St, Linyi County"
+    deliveryPhone: "13500135016"
+    actualAmount: 68
+    deliveryName: "等价测试2"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case17-等价类-地址中文+英文+数字混合"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "北京市朝阳区望京SOHO T1-1808室"
+    deliveryPhone: "13600136017"
+    actualAmount: 68
+    deliveryName: "等价测试3"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case20-等价类-姓名为中文"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13700137018"
+    actualAmount: 68
+    deliveryName: "张三"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case21-等价类-姓名含特殊字符"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138019"
+    actualAmount: 68
+    deliveryName: "王·五"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case22-等价类-手机号以1开头11位"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19800198020"
+    actualAmount: 68
+    deliveryName: "等价测试4"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case23-等价类-手机号为联通号段"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18600186021"
+    actualAmount: 68
+    deliveryName: "等价测试5"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case24-等价类-商品名称为中文"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18700187022"
+    actualAmount: 68
+    deliveryName: "等价测试6"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case25-等价类-备注为空"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18800188023"
+    actualAmount: 68
+    deliveryName: "等价测试7"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case26-等价类-备注为长文本100字"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18900189024"
+    actualAmount: 68
+    deliveryName: "等价测试8"
+    totalAmount: 68
+    discountAmount: 0
+    remark: "这是一个非常长的备注信息，用来测试系统对长文本的处理能力。用户可能会在备注中填写详细的送货要求、特殊说明或者其他重要信息，系统应该能够正确处理这些长文本内容，不会出现截断或报错的情况。"
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  - scenario: "正向case27-等价类-商品产地为中文"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19000190025"
+    actualAmount: 68
+    deliveryName: "等价测试9"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+        productOrigin: "山西省运城市"
+
+  - scenario: "正向case28-等价类-商品产地为空"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19100191026"
+    actualAmount: 68
+    deliveryName: "等价测试10"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+        productOrigin: null
+
+  # ---------- 不同商品类型覆盖 ----------
+  - scenario: "正向case29-覆盖-手工竹编篮单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19200192027"
+    actualAmount: 35.00
+    deliveryName: "覆盖测试1"
+    totalAmount: 35.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 2
+        productName: "手工竹编篮"
+        productPrice: 35.00
+        quantity: 1
+        totalPrice: 35.00
+
+  - scenario: "正向case30-覆盖-桃源茶叶单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19300193028"
+    actualAmount: 128.00
+    deliveryName: "覆盖测试2"
+    totalAmount: 128.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 3
+        productName: "桃源茶叶"
+        productPrice: 128.00
+        quantity: 1
+        totalPrice: 128.00
+
+  - scenario: "正向case31-覆盖-野生山菇单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19400194029"
+    actualAmount: 85.00
+    deliveryName: "覆盖测试3"
+    totalAmount: 85.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 4
+        productName: "野生山菇"
+        productPrice: 85.00
+        quantity: 1
+        totalPrice: 85.00
+
+  - scenario: "正向case32-覆盖-手工豆腐单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19500195030"
+    actualAmount: 12.00
+    deliveryName: "覆盖测试4"
+    totalAmount: 12.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 5
+        productName: "手工豆腐"
+        productPrice: 12.00
+        quantity: 1
+        totalPrice: 12.00
+
+  - scenario: "正向case33-覆盖-桃源米酒单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19600196031"
+    actualAmount: 58.00
+    deliveryName: "覆盖测试5"
+    totalAmount: 58.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 6
+        productName: "桃源米酒"
+        productPrice: 58.00
+        quantity: 1
+        totalPrice: 58.00
+
+  - scenario: "正向case34-覆盖-农家西红柿单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19700197032"
+    actualAmount: 15.90
+    deliveryName: "覆盖测试6"
+    totalAmount: 15.90
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 7
+        productName: "农家西红柿"
+        productPrice: 15.90
+        quantity: 1
+        totalPrice: 15.90
+
+  - scenario: "正向case35-覆盖-金针菇单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19800198033"
+    actualAmount: 5.00
+    deliveryName: "覆盖测试7"
+    totalAmount: 5.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 8
+        productName: "金针菇"
+        productPrice: 5.00
+        quantity: 1
+        totalPrice: 5.00
+
+  - scenario: "正向case36-覆盖-生菜单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "19900199034"
+    actualAmount: 3
+    deliveryName: "覆盖测试8"
+    totalAmount: 3
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 9
+        productName: "生菜"
+        productPrice: 3
+        quantity: 1
+        totalPrice: 3
+
+  - scenario: "正向case37-覆盖-桃源寿司单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18000180035"
+    actualAmount: 10.00
+    deliveryName: "覆盖测试9"
+    totalAmount: 10.00
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 10
+        productName: "桃源寿司"
+        productPrice: 10.00
+        quantity: 1
+        totalPrice: 10.00
+
+  - scenario: "正向case38-覆盖-土豆单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18100181036"
+    actualAmount: 1
+    deliveryName: "覆盖测试10"
+    totalAmount: 1
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 11
+        productName: "土豆"
+        productPrice: 1
+        quantity: 1
+        totalPrice: 1
+
+  - scenario: "正向case39-覆盖-油酥饼单品"
+    interfaceName: "createOrder"
+    type: "positive"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "18300183037"
+    actualAmount: 1
+    deliveryName: "覆盖测试11"
+    totalAmount: 1
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 13
+        productName: "油酥饼"
+        productPrice: 1
+        quantity: 1
+        totalPrice: 1
+
+  - scenario: "正向case40-discountAmount为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138004"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: null
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+
+  # ================================================================
+  # 负向用例（negative）- 字段级校验
+  # ================================================================
+
+  # ---------- totalAmount 异常 ----------
+  - scenario: "负向case0-totalAmount为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138001"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: null
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "订单总金额不能为空"
+
+  - scenario: "负向case1-totalAmount为0（小于0.01）"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138002"
+    actualAmount: 0
+    deliveryName: "测试"
+    totalAmount: 0
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 0
+        quantity: 1
+        totalPrice: 0
+    expected_code: 400
+    expected_msg: "订单总金额必须大于0"
+
+  - scenario: "负向case2-totalAmount为负数"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138003"
+    actualAmount: -1
+    deliveryName: "测试"
+    totalAmount: -1
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: -1
+        quantity: 1
+        totalPrice: -1
+    expected_code: 400
+    expected_msg: "订单总金额必须大于0"
+
+  # ---------- discountAmount 异常 ----------
+  - scenario: "负向case4-discountAmount为负数"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138005"
+    actualAmount: 78
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: -10
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "优惠金额不能为负数"
+
+  # ---------- actualAmount 异常 ----------
+  - scenario: "负向case5-actualAmount为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138006"
+    actualAmount: null
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "实付金额不能为空"
+
+  - scenario: "负向case6-actualAmount为0（小于0.01）"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138007"
+    actualAmount: 0
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 68
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "实付金额必须大于0"
+
+  - scenario: "负向case7-actualAmount为负数"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138008"
+    actualAmount: -1
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 69
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "实付金额必须大于0"
+
+  # ---------- deliveryAddress 异常 ----------
+  - scenario: "负向case8-deliveryAddress为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: null
+    deliveryPhone: "13800138009"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货地址不能为空"
+
+  - scenario: "负向case9-deliveryAddress为空字符串"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: ""
+    deliveryPhone: "13800138010"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货地址不能为空"
+
+  # ---------- deliveryName 异常 ----------
+  - scenario: "负向case10-deliveryName为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138011"
+    actualAmount: 68
+    deliveryName: null
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货人姓名不能为空"
+
+  - scenario: "负向case11-deliveryName为空字符串"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138012"
+    actualAmount: 68
+    deliveryName: ""
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货人姓名不能为空"
+
+  # ---------- deliveryPhone 异常 ----------
+  - scenario: "负向case12-deliveryPhone为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: null
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货人电话不能为空"
+
+  - scenario: "负向case13-deliveryPhone为空字符串"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: ""
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货人电话不能为空"
+
+  # ---------- productId 异常 ----------
+  - scenario: "负向case14-productId为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138013"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: null
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "商品ID不能为空"
+
+  - scenario: "负向case15-productId不存在"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138014"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 99999
+        productName: "不存在的商品"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "商品不存在"
+
+  # ---------- productName 异常 ----------
+  - scenario: "负向case16-productName为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138015"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: null
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "商品名称不能为空"
+
+  - scenario: "负向case17-productName为空字符串"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138016"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: ""
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "商品名称不能为空"
+
+  # ---------- productPrice 异常 ----------
+  - scenario: "负向case18-productPrice为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138017"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: null
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "商品单价不能为空"
+
+  - scenario: "负向case19-productPrice为0"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138018"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 0
+        quantity: 1
+        totalPrice: 0
+    expected_code: 400
+    expected_msg: "商品单价必须大于0"
+
+  - scenario: "负向case20-productPrice为负数"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138019"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: -1
+        quantity: 1
+        totalPrice: -1
+    expected_code: 400
+    expected_msg: "商品单价必须大于0"
+
+  # ---------- quantity 异常 ----------
+  - scenario: "负向case22-quantity为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138020"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: null
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "购买数量不能为空"
+
+  - scenario: "负向case23-quantity为0"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138021"
+    actualAmount: 0
+    deliveryName: "测试"
+    totalAmount: 0
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 0
+        totalPrice: 0
+    expected_code: 400
+    expected_msg: "购买数量必须大于0"
+
+  - scenario: "负向case24-quantity为负数"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "138001380"
+    actualAmount: -68
+    deliveryName: "测试"
+    totalAmount: -68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: -1
+        totalPrice: -68
+    expected_code: 400
+    expected_msg: "购买数量必须大于0"
+
+  - scenario: "负向case25-totalPrice为null"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138023"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: null
+    expected_code: 400
+    expected_msg: "小计金额不能为空"
+
+  - scenario: "负向case26-totalPrice为0"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138024"
+    actualAmount: 68
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 0
+    expected_code: 400
+    expected_msg: "小计金额必须大于0"
+
+        # ---------- 组合异常 ----------
+  - scenario: "负向case27-多个字段为空"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: null
+    deliveryPhone: null
+    actualAmount: 68
+    deliveryName: null
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 400
+    expected_msg: "收货地址不能为空;收货人姓名不能为空;收货人电话不能为空"
+
+  - scenario: "负向case28-orderItems为空列表"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138025"
+    actualAmount: 0
+    deliveryName: "测试"
+    totalAmount: 0
+    discountAmount: 0
+    remark: null
+    orderItems: [ ]
+    expected_code: 400
+    expected_msg: "订单明细不能为空; 订单总金额不能为空"
+
+  - scenario: "负向case29-实付金额不等于总金额-优惠"
+    interfaceName: "createOrder"
+    type: "negative"
+    deliveryAddress: "测试地址"
+    deliveryPhone: "13800138026"
+    actualAmount: 50
+    deliveryName: "测试"
+    totalAmount: 68
+    discountAmount: 0
+    remark: null
+    orderItems:
+      - productId: 1
+        productName: "桃源蜂蜜"
+        productPrice: 68
+        quantity: 1
+        totalPrice: 68
+    expected_code: 500
+    expected_msg: "实付金额计算错误"

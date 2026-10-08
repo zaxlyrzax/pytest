@@ -1,0 +1,461 @@
+cases_data:
+
+    # getProductPage-positive
+    - scenario: "正常分页查询商品"
+      interfaceName: "getProductPage"
+      type: "positive"
+      page_num: 1
+      page_size: 10
+      category_id: 1
+      keyword:
+      status: 1
+      isFeatured: 1
+
+    - scenario: "空数据分页查询商品"
+      interfaceName: "getProductPage"
+      type: "positive"
+      page_num:
+      page_size:
+      category_id:
+      keyword:
+      status:
+      isFeatured:
+    # getProductPage-negative
+    - scenario: "非法数据分页查询商品"
+      interfaceName: "getProductPage"
+      type: "negative"
+      page_num:
+      page_size: "一"
+      category_id:
+      keyword:
+      status:
+      isFeatured:
+      expected_code: 500
+      expected_msg: "系统内部错误，请联系管理员"
+
+    # getProductById-positive
+    - scenario: "正常id查询商品"
+      interfaceName: "getProductById"
+      type: "positive"
+      productId: 1
+
+    # getProductById-negative
+    - scenario: "非法id查询"
+      interfaceName: "getProductById"
+      type: "negative"
+      productId: "一"
+      expected_code: 500
+      expected_msg: "系统内部错误，请联系管理员"
+
+    - scenario: "查询边界值外id"
+      interfaceName: "getProductById"
+      type: "negative"
+      productId: 100
+      expected_code: 500
+      expected_msg: "商品不存在"
+
+    # createProduct-positive
+    # case0
+    - scenario: "正常创建商品"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_000"
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      # =======可选参数========
+      description: "新鲜美味"
+      isFeatured: 1
+      status: 1
+      origin: "山西省运城市"
+      unit: "斤"
+    # 可选参数全部为空 case1
+    - scenario: "可选参数全部为空"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_001"
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      # =======可选参数========
+    # price小数点3位 case2
+    - scenario: "price小数点3位"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_002"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10.231
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+    # price长度=10 case3
+    - scenario: "price长度=10"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_003"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 99999999.99
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+    # originalPrice长度=10 case4
+    - scenario: "originalPrice长度=10"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_004"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 99
+      # 原价
+      originalPrice: 99999999.99
+      stock: 100
+      weight: 0.8
+    # originalPrice小数点3位 case5
+    - scenario: "originalPrice长度=10"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_005"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 99
+      # 原价
+      originalPrice: 100.821
+      stock: 100
+      weight: 0.8
+    #originalPrice为空 case6
+    - scenario: "originalPrice为空"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_006"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 99
+      # 原价
+      originalPrice:
+      stock: 100
+      weight: 0.8
+    # stock为小数 case7
+    - scenario: "stock为小数"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_007"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100.8
+      weight: 0.8
+    # stock=0 case8
+    - scenario: "stock=0"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_008"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 0
+      weight: 0.8
+    # stock值为空 case9
+    - scenario: "stock为空"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_009"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock:
+      weight: 0.8
+    # weight值为0 case10
+    - scenario: "weight值为0"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_010"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0
+    # weight值为8位 case11
+    - scenario: "weight值为8位"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_011"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 999999.99
+    # weight值为空 case12
+    - scenario: "weight值为空"
+      interfaceName: "createProduct"
+      type: "positive"
+      name: "pro_ts_pos_011"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight:
+
+
+
+    # createProduct-negative
+    # 分类id不存在 case0
+    - scenario: "分类id不存在"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_000"
+      # 分类ID
+      categoryId: 10
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 500
+      expected_msg: "商品分类不存在或已禁用"
+    # 非法分类id case1
+    - scenario: "非法分类id"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_001"
+      # 分类ID
+      categoryId: "一"
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 500
+      expected_msg: "商品分类不存在或已禁用"
+    # 非法price case2
+    - scenario: "非法price"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_002"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: "十"
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 500
+      expected_msg: "价格格式不正确"
+    # price=0 case3
+    - scenario: "price=0"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_003"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 0
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 400
+      expected_msg: "价格必须大于0"
+    # price<0 case4
+    - scenario: "price<0"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_004"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: -2
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 400
+      expected_msg: "价格必须大于0"
+    # price为空 case5
+    - scenario: "price为空"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_005"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price:
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 400
+      expected_msg: "价格不能为空"
+    # price长度=11 case6
+    - scenario: "price长度=11"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_006"
+      # 分类ID
+      categoryId: 1
+      # 价格(11位)
+      price: 100000000.00
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 0.8
+      expected_code: 500
+      expected_msg: "数据操作失败，可能违反了数据库约束"
+    # originalPrice值<0 case7
+    - scenario: "originalPrice值<0"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_007"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: -20
+      stock: 100
+      weight: 0.8
+      expected_code: 400
+      expected_msg: "原价不能为负数"
+    # stock值为负数 case8
+    - scenario: "stock值为负数"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_008"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: -100
+      weight: 0.8
+      expected_code: 400
+      expected_msg: "库存数量不能为负数"
+    # weight值为负数 case9
+    - scenario: "weight值为负数"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_009"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: -0.8
+      expected_code: 400
+      expected_msg: "重量不能为负数"
+    # originalPrice长度为11位 case10
+    - scenario: "originalPrice长度为11位"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_010"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 100000000.00
+      stock: 100
+      weight: 0.5
+      expected_code: 500
+      expected_msg: "数据操作失败，可能违反了数据库约束"
+    # weight值大于8位 case11
+    - scenario: "weight值大于8位"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_011"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 1000000.00
+      expected_code: 500
+      expected_msg: "数据操作失败，可能违反了数据库约束"
+    # name为空 case12
+    - scenario: "name为空"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: ""
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 10
+      expected_code: 400
+      expected_msg: "商品名称不能为空"
+    # name长度为100位 case13
+    - scenario: "name长度为100位"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: 10
+      expected_code: 500
+      expected_msg: "数据操作失败，可能违反了数据库约束"
+    # weight值为字符 case14
+    - scenario: "weight值为字符"
+      interfaceName: "createProduct"
+      type: "negative"
+      name: "pro_ts_neg_014"
+      # 分类ID
+      categoryId: 1
+      # 价格
+      price: 10
+      # 原价
+      originalPrice: 20
+      stock: 100
+      weight: "十斤"
+      expected_code: 500
+      expected_msg: "数据操作失败，可能违反了数据库约束"
+

@@ -1,0 +1,208 @@
+cases_data:
+  - scenario: "正常注册用户"
+    type: "positive"
+    username: "wangwu"
+    password: "1234567"
+    confirmPassword: "1234567"
+    email: "29482197783@qq.com"
+    phoneNumber: "18139204214"
+
+
+  - scenario: "用户名输入长度小于4位"
+    type: "negative"
+    username: "8jw"
+    password: "1234567"
+    confirmPassword: "1234567"
+    email: "2944215213@qq.com"
+    phoneNumber: "18132314214"
+    expected_code: 500
+    expected_msg: "用户名长度必须在4-20之间"
+
+  - scenario: "用户名输入长度大于20位"
+    type: "negative"
+    username: "8jw9iw123fsaqwe32sfswx"
+    password: "1234567"
+    confirmPassword: "1234567"
+    email: "2944421451@qq.com"
+    phoneNumber: "18132257891"
+    expected_code: 500
+    expected_msg: "用户名长度必须在4-20之间"
+
+  - scenario: "密码输入长度小于6位"
+    type: "negative"
+    username: "8jw9"
+    password: "12345"
+    confirmPassword: "12345"
+    email: "2983192042@qq.com"
+    phoneNumber: "18138904215"
+    expected_code: 500
+    expected_msg: "密码长度必须在6-20之间"
+
+  - scenario: "密码输入长度大于20位"
+    type: "negative"
+    username: "8jw0"
+    password: "123456789012345678901"
+    confirmPassword: "123456789012345678901"
+    email: "2983192043@qq.com"
+    phoneNumber: "18138904216"
+    expected_code: 500
+    expected_msg: "密码长度必须在6-20之间"
+
+  - scenario: "邮箱格式不正确"
+    type: "negative"
+    username: "8jw1"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192044"
+    phoneNumber: "18138904217"
+    expected_code: 500
+    expected_msg: "邮箱格式不正确"
+
+  - scenario: "手机号格式不正确"
+    type: "negative"
+    username: "8jw2"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192045@qq.com"
+    phoneNumber: "10138904218"
+    expected_code: 500
+    expected_msg: "手机号格式不正确"
+
+  - scenario: "用户名为空"
+    type: "negative"
+    username: ""
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192046@qq.com"
+    phoneNumber: "18138904219"
+    expected_code: 500
+    expected_msg: "用户名不能为空"
+
+  - scenario: "密码为空"
+    type: "negative"
+    username: "8jw4"
+    password: ""
+    confirmPassword: "123456"
+    email: "2983192047@qq.com"
+    phoneNumber: "18138904220"
+    expected_code: 500
+    expected_msg: "两次密码输入不一致"
+
+  - scenario: "确认密码为空"
+    type: "negative"
+    username: "8jw5"
+    password: "123456"
+    confirmPassword: ""
+    email: "2983192048@qq.com"
+    phoneNumber: "18138904221"
+    expected_code: 500
+    expected_msg: "两次密码输入不一致"
+
+
+  - scenario: "邮箱为空"
+    type: "negative"
+    username: "8jw6"
+    password: "123456"
+    confirmPassword: "123456"
+    email: ""
+    phoneNumber: "18138904222"
+    expected_code: 500
+    expected_msg: "邮箱不能为空"
+
+  - scenario: "手机号为空"
+    type: "positive"
+    username: "8jw7"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192050@qq.com"
+    phoneNumber: ""
+
+  - scenario: "邮箱输入有字符"
+    type: "negative"
+    username: "8jw8"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "29831wf051@qq.com"
+    phoneNumber: "18138904224"
+    expected_code: 500
+    expected_msg: "邮箱格式不正确"
+
+  - scenario: "密码输入带字符"
+    type: "positive"
+    username: "8jw10"
+    password: "sdwq_?wq~!。"
+    confirmPassword: "sdwq_?wq~!。"
+    email: "2983192052@qq.com"
+    phoneNumber: "18138904225"
+
+  - scenario: "两次密码输入不一致"
+    type: "negative"
+    username: "8jw11"
+    password: "123456"
+    confirmPassword: "122456"
+    email: "2983192053@qq.com"
+    phoneNumber: "18138904226"
+    expected_code: 500
+    expected_msg: "两次密码输入不一致"
+
+  - scenario: "用户已存在"
+    type: "negative"
+    username: "lisi"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192051@qq.com"
+    phoneNumber: ""
+    expected_code: 500
+    expected_msg: "用户名已存在"
+
+  - scenario: "邮箱已存在"
+    type: "negative"
+    username: "8jw12"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192051@qq.com"
+    phoneNumber: ""
+    expected_code: 500
+    expected_msg: "邮箱已被注册"
+
+  - scenario: "SQL注入攻击"
+    type: "security"
+    username: ''' or 1=1 --'''
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192052@qq.com"
+    phoneNumber: "13800000000"
+    expected_code: 500
+    expected_msg: "用户名包含非法字符"
+
+  - scenario: "XSS脚本攻击"
+    type: "security"
+    username: "<script>alert(1)</script>"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2983192053@qq.com"
+    phoneNumber: "13800000001"
+    expected_code: 500
+    expected_msg: "用户名包含非法字符"
+
+  - scenario: "正常注册-并发重复点击"
+    type: "concurrent"
+    username: "test_concu_001"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "2842909134@test.com"
+    phoneNumber: "13812345678"
+    expected_code: 200
+    expected_msg: "注册成功"
+    allow_success_max: 1
+
+  - scenario: "异常注册-并发重复点击"
+    type: "concurrent"
+    username: "test_concu_002"
+    password: "123456"
+    confirmPassword: "123456"
+    email: "28429WE134@test.com"
+    phoneNumber: "13812345679"
+    expected_code: 500
+    expected_msg: "邮箱格式不正确"
+    allow_success_max: 0
