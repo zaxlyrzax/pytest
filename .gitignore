@@ -1,0 +1,25 @@
+# 忽略环境目录
+venv/
+.venv/
+env/
+
+# 忽略 Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 忽略 IDE 配置
+.idea/
+.vscode/
+
+# 忽略日志和报告
+logs/
+allure-results/
+allure-report/
+reports/
+
+# 忽略大型驱动文件
+chromedriver.exe
+
+# 忽略系统文件
+.DS_Store
