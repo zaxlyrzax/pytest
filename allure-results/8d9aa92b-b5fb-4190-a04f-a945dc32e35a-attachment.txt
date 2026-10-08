@@ -1,7 +1,0 @@
-[33mWARNING [0m pytest_result_log:plugin.py:122 Start: test_cases/test_api/test_product_api.py::TestProductApi::test_create_product_negative[case2]
-[32mINFO    [0m common.api_client:api_client.py:30 【POST请求】url=http://192.168.111.128:7070/auth/login, json={'username': 'admin', 'password': '123456'}
-[32mINFO    [0m common.api_client:api_client.py:32 【响应】status_code=200, body={"code":200,"message":"操作成功","data":{"id":1,"username":"admin","token":"eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MTQ1NDM4MiwiZXhwIjoxNzkxNTQwNzgyfQ.En6CQ-5mwMn8LAE_8Ok8SrRnqA39G8y8o-5dF3q-2PI","role":"ADMIN","avatar":"/api/file/download/ef8b5054-32aa-4991-842d-729ffe771e11.jpg","email":"2232574827@qq.com","realName":"admin"}}
-[32mINFO    [0m conftest:test_product_api.py:103 当前【测试场景】:非法price
-[32mINFO    [0m common.api_client:api_client.py:30 【POST请求】url=http://192.168.111.128:7070/products, json={'name': 'pro_ts_neg_002', 'categoryId': 1, 'price': '十', 'originalPrice': 20, 'stock': 100, 'weight': 0.8}
-[32mINFO    [0m common.api_client:api_client.py:32 【响应】status_code=500, body={"code":500,"message":"系统内部错误，请联系管理员","data":null}
-[33mWARNING [0m pytest_result_log:plugin.py:128 End: test_cases/test_api/test_product_api.py::TestProductApi::test_create_product_negative[case2]
